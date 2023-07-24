@@ -38,6 +38,7 @@ export const webHook = async (request, response) => {
       endpointSecret
     );
   } catch (err) {
+    console.log(err.message);
     response.status(400).send(`Webhook Error: ${err.message}`);
     return;
   }
